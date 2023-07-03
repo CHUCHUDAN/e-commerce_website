@@ -1,8 +1,8 @@
-const productService = require('../service/product-service')
+// const productService = require('../service/product-service')
 
 module.exports = {
   // 首頁
   getProducts: (req, res, next) => {
-    res.send('歡迎光臨')
+    res.render('products/products')
   }
 }

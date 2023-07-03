@@ -2,4 +2,18 @@
   <div class="title-wrapper">
     <h2>我的電商網站</h2>
   </div>
+  {{#if loginUser}}
+  <div class="user-logout-wrapper">
+    <a class="user-profile-link" href="/v1/user/profile">{{loginUser.email}}</a>
+    <a href="/v1/user/logout">
+      <button class="user-logout-button">登出</button>
+    </a>
+  </div>
+  {{else}}
+  <div class="user-login-wrapper">
+    <a href="/v1/user/login">
+      <button class="user-login-button">登入</button>
+    </a>
+  </div>
+  {{/if}}
 </header>

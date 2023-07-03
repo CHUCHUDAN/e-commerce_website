@@ -18,6 +18,9 @@ router
   .get(userController.getLoginPage)
   .post(validation, passport.authenticate('local'), userController.login)
 
+// 登出
+router.get('/user/logout', userController.logout)
+
 router.use('/products', products)
 router.use('/', ErrorHandler)
 module.exports = router

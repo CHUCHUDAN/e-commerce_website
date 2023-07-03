@@ -97,11 +97,40 @@ button {
 header {
   background-color: #FF5809;
   padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 20px;
 }
+
 .title-wrapper {
   height: 100%;
   display: flex;
   align-items: center;
+}
+
+.user-login-wrapper {
+  display: grid;
+  grid-template-columns: 100px;
+  grid-template-rows: 1fr;
+  grid-gap: 20px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.user-logout-wrapper {
+  display: grid;
+  grid-template-columns: 200px 100px;
+  grid-template-rows: 1fr;
+  grid-gap: 20px;
+  align-items: center;
+  justify-content: flex-end;
+}
+.user-profile-link {
+  color: black
+}
+.user-logout-button, .user-login-button {
+  background-color: #FFBD9D;
 }
 /* main */
 
@@ -110,6 +139,7 @@ footer {
   background-color: #FF5809;
   padding: 5px;
 }
+
 .year-wrapper {
   height: 100%;
   display: flex;

@@ -28,7 +28,13 @@ module.exports = {
   },
   // 登入功能
   login: (req, res) => {
-    req.flash('success_messages', '成功登入！')
+    req.flash('success_messages', '登入成功！')
     res.redirect('/v1/products')
+  },
+  // 登出功能
+  logout: (req, res) => {
+    req.logout()
+    req.flash('success_messages', '登出成功！')
+    res.redirect('/v1/user/login')
   }
 }

@@ -6,6 +6,7 @@ const flash = require('connect-flash')
 const session = require('express-session')
 const handlebarsHelpers = require('./helpers/handlebars-helpers')
 const passport = require('./config/passport')
+const { getUser } = require('./helpers/auth-helpers')
 
 const SESSION_SECRET = 'secret'
 
@@ -20,6 +21,7 @@ app.use(flash())
 app.use((req, res, next) => {
   res.locals.success_messages = req.flash('success_messages')
   res.locals.error_messages = req.flash('error_messages')
+  res.locals.loginUser = getUser(req)
   next()
 })
 
