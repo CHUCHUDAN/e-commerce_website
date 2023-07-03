@@ -15,7 +15,6 @@ passport.use(new LocalStrategy(
   async (email, password, cb) => {
     try {
       const user = await User.findOne({ where: { email } })
-      console.log(user)
       if (!user) throw new CustomError('帳號或密碼輸入錯誤！', 400)
       const res = await bcrypt.compare(password, user.password)
       if (!res) throw new CustomError('帳號或密碼輸入錯誤！', 400)
