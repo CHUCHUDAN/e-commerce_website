@@ -4,7 +4,7 @@ module.exports = {
   // 註冊頁面
   getRegisterPage: (req, res, next) => {
     try {
-      return res.render('users/register', { css: 'register' })
+      return res.render('users/register', { css: 'register-login' })
     } catch (err) {
       next(err)
     }
@@ -17,5 +17,13 @@ module.exports = {
       req.flash('success_messages', '註冊成功!')
       return res.redirect('back')
     })
+  },
+  // 登入頁面
+  getLoginPage: (req, res, next) => {
+    try {
+      return res.render('users/login', { css: 'register-login' })
+    } catch (err) {
+      next(err)
+    }
   }
 }

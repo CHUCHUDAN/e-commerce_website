@@ -1,0 +1,29 @@
+<div class="wrapper">
+  <div class="login-wrapper">
+    <div class="login-title">
+      <h3>登入</h3>
+    </div>
+    {{> message}}
+    <form action="/v1/user/login" class="login-form" method="POST">
+      <div class="form-item">
+        <label class="form-label" for="email">信箱:</label>
+        <span class="form-text">※注意請填寫正確的信箱格式</span>
+        <input class="form-input" type="email" id="email" name="email" placeholder="請輸入有效信箱" minlength="3"
+          maxlength="50" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+      </div>
+      <div class="form-item">
+        <label class="form-label" for="password">密碼:</label>
+        <span class="form-text">※注意請填寫4-50長度的密碼</span>
+        <input class="form-input" type="password" id="password" name="password" placeholder="請輸入密碼" minlength="4"
+          maxlength="50" required>
+      </div>
+      <div class="button-wrapper">
+        <button class="login-button" type="submit">登入</button>
+      </div>
+    </form>
+    <div class="login-text">
+      還沒有帳號了?
+      <a class="login-text-link" href="/v1/user/register">註冊</a>
+    </div>
+  </div>
+</div>

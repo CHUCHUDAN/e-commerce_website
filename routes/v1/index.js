@@ -10,5 +10,10 @@ router
   .get(userController.getRegisterPage)
   .post(validation, userController.postUser)
 
+// 登入
+router
+  .route('/user/login')
+  .get(userController.getLoginPage)
+
 router.use('/', ErrorHandler)
 module.exports = router
