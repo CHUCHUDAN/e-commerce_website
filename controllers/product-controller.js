@@ -3,6 +3,6 @@
 module.exports = {
   // 首頁
   getProducts: (req, res, next) => {
-    res.render('products/products')
+    return res.render('products/products')
   }
 }

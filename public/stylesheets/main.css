@@ -109,6 +109,11 @@ header {
   align-items: center;
 }
 
+.title {
+  color: black;
+  font-size: 40px;
+}
+
 .user-login-wrapper {
   display: grid;
   grid-template-columns: 100px;
