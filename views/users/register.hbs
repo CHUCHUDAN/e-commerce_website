@@ -1,0 +1,40 @@
+<div class="wrapper">
+  <div class="register-wrapper">
+    <div class="register-title">
+      <h3>註冊</h3>
+    </div>
+    {{> message}}
+    <form action="/v1/user/register" class="register-form" method="POST">
+      <div class="form-item">
+        <label class="form-label" for="name">姓名:</label>
+        <span class="form-text">※注意請填寫正式姓名，字數限制為1-20個字</span>
+        <input class="form-input" type="text" id="name" name="name" placeholder="請輸入真實姓名" minlength="1" maxlength="20"  required>
+      </div>
+      <div class="form-item">
+        <label class="form-label" for="email">信箱:</label>
+        <span class="form-text">※注意請填寫正確的信箱格式</span>
+        <input class="form-input" type="email" id="email" name="email" placeholder="請輸入有效信箱" minlength="3"
+          maxlength="50" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"  required>
+      </div>
+      <div class="form-item">
+        <label class="form-label" for="password">密碼:</label>
+        <span class="form-text">※注意請填寫4-50長度的密碼</span>
+        <input class="form-input" type="password" id="password" name="password" placeholder="請設定密碼" minlength="4"
+          maxlength="50"  required>
+      </div>
+      <div class="form-item">
+        <label class="form-label" for="passwordCheck">確認密碼:</label>
+        <span class="form-text">※注意請填寫與密碼相同之確認密碼</span>
+        <input class="form-input" type="password" id="passwordCheck" name="passwordCheck" placeholder="請輸入確認密碼"
+          minlength="4" maxlength="50"  required>
+      </div>
+      <div class="button-wrapper">
+        <button class="register-button" type="submit">註冊</button>
+      </div>
+    </form>
+    <div class="register-text">
+      已經有帳號了?
+      <a class="register-text-link" href="/signin">登入</a>
+    </div>
+  </div>
+</div>

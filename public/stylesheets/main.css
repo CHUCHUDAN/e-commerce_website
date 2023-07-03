@@ -1,0 +1,174 @@
+/* CSS reset */
+/* 載入字型 */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap&subset=chinese-traditional");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F0F0F0;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  height: auto;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 1fr 40px;
+  grid-gap: 30px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  line-height: 0.9;
+}
+
+p {
+  margin: 0;
+}
+
+ul,
+li {
+  list-style-type: none;
+  /* 拿掉前方圈圈 */
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  /* 拿掉底線 */
+}
+
+/*共用樣式*/
+button:hover {
+  /* 陰影 */
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(87, 87, 87, 1);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(87, 87, 87, 1);
+  box-shadow: 0px 1px 5px 0px rgba(87, 87, 87, 1);
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: background-color ease-in-out 0.3s;
+}
+
+
+.container {
+  width: 85%;
+  margin: 0 auto 3rem auto;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* header */
+header {
+  background-color: #FF5809;
+  padding: 10px;
+}
+.title-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+/* main */
+
+/* footer */
+footer {
+  background-color: #FF5809;
+  padding: 5px;
+}
+.year-wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* messages */
+
+.alert-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.alert-message {
+  width: 80%;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 5px;
+  -webkit-box-shadow: 0px 1px 3px 0px #D0D0D0;
+  -moz-box-shadow: 0px 1px 3px 0px #D0D0D0;
+  box-shadow: 0px 1px 3px 0px #D0D0D0;
+  letter-spacing: 1.5px;
+  position: relative;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.close-button {
+  position: absolute;
+  right: 5px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.success-color {
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+
+.error-color {
+  background-color: #FFC0C7;
+  color: black;
+}
+
+.alert-message-index {
+  width: 400px;
+  margin-top: 10px;
+}
