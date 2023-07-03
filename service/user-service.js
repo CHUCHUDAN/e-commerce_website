@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs')
 
 module.exports = {
   // 註冊功能
-  postUser: async (req, cb) => {
+  register: async (req, cb) => {
     try {
       const { name, email, password } = req.body
       const userEmail = await User.findOne({ where: { email } })

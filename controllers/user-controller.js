@@ -10,8 +10,8 @@ module.exports = {
     }
   },
   // 註冊功能
-  postUser: (req, res, next) => {
-    userService.postUser(req, (err, data) => {
+  register: (req, res, next) => {
+    userService.register(req, (err, data) => {
       if (err) return next(err)
       req.session.createdData = data
       req.flash('success_messages', '註冊成功!')
@@ -25,5 +25,10 @@ module.exports = {
     } catch (err) {
       next(err)
     }
+  },
+  // 登入功能
+  login: (req, res) => {
+    req.flash('success_messages', '成功登入！')
+    res.redirect('/v1/products')
   }
 }
