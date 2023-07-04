@@ -28,6 +28,12 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
+      gender: {
+        type: Sequelize.STRING(3)
+      },
+      birth: {
+        type: Sequelize.DATEONLY
+      },
       avatar: {
         type: Sequelize.STRING,
         defaultValue: 'https://i.imgur.com/BMxWxE8.jpeg'

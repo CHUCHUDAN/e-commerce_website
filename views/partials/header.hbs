@@ -1,10 +1,13 @@
 <header>
   <div class="title-wrapper">
-    <a class="title" href="/v1/products">我的電商網站</a>
+    <a class="title" href="/">我的電商網站</a>
   </div>
   {{#if loginUser}}
   <div class="user-logout-wrapper">
-    <a class="user-profile-link" href="/v1/user/profile">{{loginUser.email}}</a>
+    <div class="user-data-wrapper">
+      <span>Hi ~</span>
+      <a class="user-profile-link" href="/v1/user/profile">{{loginUser.email}}</a>
+    </div>
     <a href="/v1/user/logout">
       <button class="user-logout-button">登出</button>
     </a>

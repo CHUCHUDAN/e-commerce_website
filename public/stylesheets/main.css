@@ -125,11 +125,15 @@ header {
 
 .user-logout-wrapper {
   display: grid;
-  grid-template-columns: 200px 100px;
+  grid-template-columns: 230px 100px;
   grid-template-rows: 1fr;
   grid-gap: 20px;
   align-items: center;
   justify-content: flex-end;
+}
+.user-data-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 .user-profile-link {
   color: black

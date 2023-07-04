@@ -5,7 +5,8 @@ const productController = require('../../controllers/product-controller')
 const { validation } = require('../../middleware/validation')
 const { ErrorHandler } = require('../../middleware/error-handler')
 const passport = require('../../config/passport')
-const products = require('./modules/products')
+const product = require('./modules/product')
+const user = require('./modules/user')
 const { authenticated, authenticatedRender } = require('../../middleware/auth')
 
 // 註冊
@@ -26,6 +27,8 @@ router.get('/user/logout', userController.logout)
 // 首頁
 router.get('/', productController.getProducts)
 
-router.use('/products', authenticated, products)
+router.use('/product', authenticated, product)
+router.use('/user', authenticated, user)
 router.use('/', ErrorHandler)
+
 module.exports = router

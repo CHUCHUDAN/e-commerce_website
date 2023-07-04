@@ -29,12 +29,16 @@ module.exports = {
   // 登入功能
   login: (req, res) => {
     req.flash('success_messages', '登入成功！')
-    res.redirect('/v1/products')
+    res.redirect('/v1')
   },
   // 登出功能
   logout: (req, res) => {
     req.logout()
     req.flash('success_messages', '登出成功！')
     res.redirect('/v1/user/login')
+  },
+  // 使用者簡介頁面
+  getUserProfile: (req, res, next) => {
+    return res.render('users/profile', { css: 'profile' })
   }
 }
