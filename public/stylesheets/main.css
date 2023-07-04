@@ -125,7 +125,7 @@ header {
 
 .user-logout-wrapper {
   display: grid;
-  grid-template-columns: 230px 100px;
+  grid-template-columns: 1fr 100px;
   grid-template-rows: 1fr;
   grid-gap: 20px;
   align-items: center;
@@ -133,10 +133,11 @@ header {
 }
 .user-data-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 .user-profile-link {
-  color: black
+  color: black;
+  padding-left: 5px;
 }
 .user-logout-button, .user-login-button {
   background-color: #FFBD9D;

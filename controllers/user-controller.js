@@ -1,4 +1,5 @@
 const userService = require('../service/user-service')
+const { getUser } = require('../helpers/auth-helpers')
 
 module.exports = {
   // 註冊頁面
@@ -39,6 +40,8 @@ module.exports = {
   },
   // 使用者簡介頁面
   getUserProfile: (req, res, next) => {
-    return res.render('users/profile', { css: 'profile' })
+    const { name, phone, gender, birth, avatar, backgroundImage } = getUser(req)
+
+    return res.render('users/profile', { css: 'profile', name, phone, gender, birth, avatar, backgroundImage })
   }
 }
